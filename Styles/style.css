@@ -1,0 +1,56 @@
+:root {
+    --cor-bgPrincipal: #3f1a30;
+    --cor-bgContraste: #64b788;
+    --cor-verdeDestaque: #80ffa8;
+    --cor-verdeCargo: #20a50b;
+}
+
+/* navbar */
+body {
+    width: 100vw;
+    height: 100vh;
+
+    background: rgb(63, 26, 48);
+    background: linear-gradient(180deg, rgba(63, 26, 48, 1) 50%, rgba(0, 0, 0, 1) 100%);
+}
+nav {
+    width: 7vw;
+    height: 50vh;
+    min-width: 60px;
+    max-height: 230px;
+    border-radius: 5px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    background-color: #ffffff;
+
+    padding: 0.5rem 0;
+    margin-left: 3%;
+    margin-top: 3%;
+}
+nav > div {
+    width: 100%;
+    height: 25%;
+
+    display: flex;
+    justify-content: center;
+}
+nav > div:hover img {
+    filter: invert(75%) sepia(74%) saturate(6107%) hue-rotate(79deg) brightness(92%) contrast(91%);
+    /* filter: invert(74%) sepia(29%) saturate(589%) hue-rotate(85deg) brightness(112%) contrast(102%); */
+}
+.imagensBotoes {
+    width: 40%;
+    height: 80%;
+    min-width: 32px;
+}
+.imagensBotoes:not(#botaoSobre) {
+    margin: 0.3rem 0 0;
+}
+#botaoSobre {
+    min-width: 40px;
+
+    margin: 0.1rem 0 0 10%;
+}
