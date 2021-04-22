@@ -1,8 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 :root {
     --cor-bgPrincipal: #3f1a30;
     --cor-bgContraste: #64b788;
     --cor-verdeDestaque: #80ffa8;
     --cor-verdeCargo: #20a50b;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
 }
 
 /* navbar */
@@ -64,11 +70,11 @@ nav > div:hover img {
     margin: 0.1rem 0 0 10%;
 }
 #divContraste {
-    height: calc(100vh - 15px);
+    height: calc(100vh - 0.9375rem);
     width: 40vw;
     border-radius: 5px 5px 0 0;
 
-    margin: 15px 0 0 1rem;
+    margin: 0.9375rem 0 0 1rem;
 
     background-color: var(--cor-bgContraste);
 }
@@ -147,7 +153,28 @@ nav > div:hover img {
 #conteudoPrincipal {
     width: 100%;
     height: 60%;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 3.5fr 1fr 1fr 4fr;
 }
+#conteudoPrincipal > h2 {
+    position: relative;
+    justify-self: center;
+    z-index: 2;
+
+    font-size: 2.125rem;
+}
+#conteudoPrincipal > h1 {
+    justify-self: center;
+
+    font-size: 1.25rem;
+    color: var(--cor-verdeCargo);
+}
+
 /* Responsividade */
 /* Desktop */
 @media screen and (min-width: 1200px) {
