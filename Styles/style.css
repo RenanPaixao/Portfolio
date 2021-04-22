@@ -10,8 +10,12 @@ body {
     width: 100vw;
     height: 100vh;
 
-    background: rgb(63, 26, 48);
     background: linear-gradient(180deg, rgba(63, 26, 48, 1) 50%, rgba(0, 0, 0, 1) 100%);
+
+    overflow-x: hidden;
+}
+main {
+    display: flex;
 }
 nav {
     width: 7vw;
@@ -20,15 +24,17 @@ nav {
     max-height: 230px;
     border-radius: 5px;
 
+    position: relative;
+    z-index: 2;
+    left: 2rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-
-    background-color: #ffffff;
-
     padding: 0.5rem 0;
     margin-left: 3%;
-    margin-top: 3%;
+    margin-top: 6%;
+
+    background-color: #ffffff;
 }
 nav > div {
     width: 100%;
@@ -36,8 +42,11 @@ nav > div {
 
     display: flex;
     justify-content: center;
+
+    cursor: pointer;
 }
 nav > div:hover img {
+    /* Essas duas cores podem ser possíveis */
     filter: invert(75%) sepia(74%) saturate(6107%) hue-rotate(79deg) brightness(92%) contrast(91%);
     /* filter: invert(74%) sepia(29%) saturate(589%) hue-rotate(85deg) brightness(112%) contrast(102%); */
 }
@@ -53,4 +62,64 @@ nav > div:hover img {
     min-width: 40px;
 
     margin: 0.1rem 0 0 10%;
+}
+#divContraste {
+    height: calc(100vh - 15px);
+    width: 40vw;
+    border-radius: 5px 5px 0 0;
+
+    margin: 15px 0 0 1rem;
+
+    background-color: var(--cor-bgContraste);
+}
+#principal {
+    width: 38vw;
+    height: 90vh;
+    border-radius: 5px;
+
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+    right: 37vw;
+    margin-top: 3.5%;
+
+    background-color: #ffffff;
+}
+#fotoFundo {
+    width: 100%;
+    height: 40%;
+    border-radius: 5px 5px 0 0;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    background-image: url(/Assets/fundoPrincipal.jpg);
+    background-size: cover;
+
+    overflow: hidden;
+}
+#efeitoEsquerdo {
+    height: 60%;
+    width: 50%;
+    transform: translate(-8%, 85%) rotate(10deg);
+
+    position: relative;
+
+    background-color: #ffffff;
+}
+
+#efeitoDireito {
+    height: 60%;
+    width: 50%;
+    transform: translate(8%, 85%) rotate(-10deg);
+
+    position: relative;
+
+    background-color: #ffffff;
+}
+#conteudoPrincipal {
+    width: 100%;
+    height: 60%;
 }
