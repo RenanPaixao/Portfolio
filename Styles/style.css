@@ -109,6 +109,31 @@ nav > div:hover img {
 
     background-color: #ffffff;
 }
+#circulo {
+    width: 30%;
+    height: 30%;
+    border-radius: 46%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    transform: translate(120%, 65%);
+    z-index: 1;
+
+    background-color: #ffffff;
+}
+#fotoPerfil {
+    width: 86%;
+    height: 75%;
+    border-radius: 48%;
+
+    transform: translate(0, -11%);
+
+    background-image: url(/Assets/foto.jpg);
+    background-size: cover;
+    background-position: 0px -6px;
+}
 
 #efeitoDireito {
     height: 60%;
@@ -122,4 +147,17 @@ nav > div:hover img {
 #conteudoPrincipal {
     width: 100%;
     height: 60%;
+}
+/* Responsividade */
+/* Desktop */
+@media screen and (min-width: 1200px) {
+}
+/* Notebooks */
+@media screen and (min-width: 960px) {
+}
+/* Tablets */
+@media screen and (min-width: 720px) {
+}
+/* Mobile */
+@media screen and (max-width: 576px) {
 }
