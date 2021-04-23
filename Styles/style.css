@@ -38,7 +38,7 @@ nav {
     justify-content: center;
     padding: 0.5rem 0;
     margin-left: 3%;
-    margin-top: 6%;
+    margin-top: 4%;
 
     background-color: #ffffff;
 }
@@ -71,7 +71,7 @@ nav > div:hover img {
 }
 #divContraste {
     height: calc(100vh - 0.9375rem);
-    width: 40vw;
+    width: 34.77vw;
     border-radius: 5px 5px 0 0;
 
     margin: 0.9375rem 0 0 1rem;
@@ -79,16 +79,16 @@ nav > div:hover img {
     background-color: var(--cor-bgContraste);
 }
 #principal {
-    width: 38vw;
-    height: 90vh;
+    width: 34vw;
+    height: 85vh;
     border-radius: 5px;
 
     display: flex;
     flex-direction: column;
     position: relative;
     z-index: 2;
-    right: 37vw;
-    margin-top: 3.5%;
+    right: 33vw;
+    margin-top: 2.5%;
 
     background-color: #ffffff;
 }
@@ -125,7 +125,7 @@ nav > div:hover img {
     justify-content: center;
     position: absolute;
     transform: translate(120%, 65%);
-    z-index: 1;
+    z-index: 2;
 
     background-color: #ffffff;
 }
@@ -138,7 +138,7 @@ nav > div:hover img {
 
     background-image: url(/Assets/foto.jpg);
     background-size: cover;
-    background-position: 0px -6px;
+    background-position: 0px -5qpx;
 }
 
 #efeitoDireito {
@@ -160,19 +160,21 @@ nav > div:hover img {
     align-items: center;
 }
 #conteudoPrincipal > h1 {
+    position: relative;
+    z-index: 2;
     justify-self: center;
     margin: 0.5rem 0;
 
-    font-size: 0.8rem;
+    font-size: 1.125rem;
     color: var(--cor-verdeCargo);
 }
 #conteudoPrincipal > h2 {
     position: relative;
     justify-self: center;
-    margin-top: -1rem;
     z-index: 2;
+    margin-top: 1.5rem;
 
-    font-size: 1.5rem;
+    font-size: 2.125rem;
 }
 
 #iconesSociais {
@@ -181,33 +183,45 @@ nav > div:hover img {
     justify-content: center;
 }
 #iconesSociais img {
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 2rem;
+    height: 2rem;
 
-    margin: 0 0.5rem;
+    margin: 1rem 0.5rem;
 
     cursor: pointer;
 }
 footer {
     display: flex;
     justify-content: space-between;
-    padding: 0 2.2rem 1rem 1.5rem;
+    padding: 0 2.4rem 1.7rem 1.7rem;
 
-    font-size: 0.7rem;
+    font-size: 1.1rem;
 }
 footer img {
-    width: 1rem;
-    height: 1rem;
+    width: 1.5rem;
+    height: 1.5rem;
 }
 footer h4 {
     cursor: pointer;
 }
 #iconeBaixar {
     margin-left: 0.2rem;
-    transform: translateY(2.5px);
+    transform: translateY(5px);
 }
 #iconeEnviar {
-    transform: translateY(3.2px) rotate(45.15deg);
+    transform: translateY(5px) rotate(45.15deg);
+}
+
+/* paginas de conteudo */
+#conteudoPagina {
+    width: 54%;
+    height: 87%;
+
+    position: absolute;
+    right: 0;
+    bottom: 3%;
+
+    background-color: #ffffff;
 }
 
 /* Responsividade */
