@@ -11,7 +11,6 @@
     font-family: 'Poppins', sans-serif;
 }
 
-/* navbar */
 body {
     width: 100vw;
     height: 100vh;
@@ -23,11 +22,11 @@ body {
 main {
     display: flex;
 }
+/* navbar */
 nav {
     width: 7vw;
-    height: 50vh;
-    min-width: 60px;
-    max-height: 230px;
+    height: 55vh;
+    min-width: 90px;
     border-radius: 5px;
 
     position: relative;
@@ -47,28 +46,38 @@ nav > div {
     height: 25%;
 
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
 
     cursor: pointer;
+    font-size: 0.7rem;
 }
-nav > div:hover img {
+nav h3 {
+    margin: -0.4rem 0 0;
+}
+nav > div:hover img,
+nav > div:hover h3 {
     /* Essas duas cores podem ser possíveis */
     filter: invert(75%) sepia(74%) saturate(6107%) hue-rotate(79deg) brightness(92%) contrast(91%);
     /* filter: invert(74%) sepia(29%) saturate(589%) hue-rotate(85deg) brightness(112%) contrast(102%); */
 }
 .imagensBotoes {
-    width: 40%;
+    width: 37%;
     height: 80%;
     min-width: 32px;
 }
-.imagensBotoes:not(#botaoSobre) {
-    margin: 0.3rem 0 0;
+#botaoProjetos {
+    width: 40%;
+    margin-left: 5px;
 }
 #botaoSobre {
+    width: 46%;
     min-width: 40px;
 
-    margin: 0.1rem 0 0 10%;
+    margin: -0.3rem 0 0 10%;
 }
+/* Contraste do fundo */
 #divContraste {
     height: calc(100vh - 0.9375rem);
     width: 34.77vw;
@@ -78,6 +87,7 @@ nav > div:hover img {
 
     background-color: var(--cor-bgContraste);
 }
+/* Tela principal */
 #principal {
     width: 34vw;
     height: 85vh;
@@ -213,7 +223,7 @@ footer h4 {
     transform: translateY(5px) rotate(45.15deg);
 }
 
-/* paginas de conteudo */
+/* Paginas de conteudo */
 #conteudoPagina {
     width: 54%;
     height: 87%;
