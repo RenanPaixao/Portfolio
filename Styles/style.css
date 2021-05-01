@@ -391,9 +391,51 @@ strong {
 }
 
 #projetos {
-    /* display: none; */
+    display: none;
 }
 
+/* Página experiência  ------------------------------------------------*/
+#experiencia {
+    display: flex;
+    flex-direction: column;
+}
+#containerExperiencia {
+    height: 40%;
+    width: 80%;
+
+    display: flex;
+    align-self: center;
+    margin: 3rem 1rem 0 0;
+}
+#containerExperiencia #tituloContainerExperiencia,
+h3 {
+    position: absolute;
+
+    color: #ffffff;
+}
+#containerExperiencia h4 {
+    padding: 1%;
+
+    border: solid 1px var(--cor-verdeDestaque);
+    color: var(--cor-verdeDestaque);
+}
+
+#containerExperiencia h3 {
+    width: 80%;
+
+    text-justify: distribute;
+    margin: 6rem 5% 2%;
+    align-self: flex-end;
+}
+
+#tituloContainerExperiencia {
+    width: 82%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2% 0 0 2%;
+}
 /* Responsividade */
 /* Desktop */
 @media screen and (min-width: 1200px) {
