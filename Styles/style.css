@@ -12,6 +12,16 @@
     font-family: 'Poppins', sans-serif;
     line-height: 1.37;
 }
+a {
+    color: var(--cor-verdeCargo);
+}
+
+a:link {
+    text-decoration: none;
+}
+a:hover {
+    color: var(--cor-bgPrincipal);
+}
 
 body {
     width: 100vw;
@@ -248,23 +258,29 @@ footer h4:hover {
 
     background-color: #ffffff;
     box-shadow: inset 3px 0 1px #000000cc;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 /* Sobre */
-#tituloSobre {
-    height: 13vh;
+/* Alinhamento */
+.tituloConteudo {
+    height: 15vh;
 
     display: flex;
     align-items: center;
-    padding-left: 4vw;
+    padding: 3vh 0 0 6vw;
 
-    font-size: 1.75rem;
+    font-size: 1.6rem;
+    font-weight: 500;
     border-bottom: solid 1px #000000a9;
 }
 #sobre div:nth-child(2) {
     margin: 3rem 1rem 2rem 3rem;
 }
-#tituloEducacao {
-    margin-left: 4.3rem;
+.segundoTitulo {
+    margin-left: 3.75rem;
+    position: relative;
+    z-index: 2;
 
     font-size: 1.3rem;
     font-weight: 450;
@@ -275,15 +291,15 @@ footer h4:hover {
     font-size: 1.1rem;
     font-weight: 600;
 }
-#sobre div:nth-child(4) {
-    margin: 1.5rem 1rem 2rem 3rem;
+#sobre div:nth-child(5) {
+    margin: 0 1rem 2rem 3rem;
 }
-#sobre div:nth-child(4) h5 {
-    margin: 1rem 0 1rem;
+#sobre div:nth-child(5) h5 {
+    margin-bottom: 1rem;
     font-size: 1.15rem;
 }
-#sobre div:nth-child(4) :nth-child(2) {
-    margin-bottom: 2rem;
+#sobre div:nth-child(5) :nth-child(3) {
+    margin: 1.2rem 0 1.5rem;
 }
 #sobre p {
     color: var(--cor-texto);
@@ -292,6 +308,90 @@ footer h4:hover {
 strong {
     color: #000000;
     font-weight: 500;
+}
+
+/* Círculos com efeito */
+.efeitoTitulo {
+    height: 2.3rem;
+    width: 2.3rem;
+    border-radius: 50%;
+
+    margin-left: 2.5rem;
+    position: relative;
+    z-index: -1;
+    transform: translateY(-88%);
+
+    background: linear-gradient(90deg, rgba(128, 255, 168, 1) 2%, rgba(255, 255, 255, 1) 100%);
+}
+#efeitoTituloSobre {
+    height: 3rem;
+    width: 3rem;
+
+    transform: translateX(-12.9rem);
+}
+#conteudoPagina span {
+    color: var(--cor-verdeDestaque);
+}
+#sobre {
+    display: none;
+}
+
+/*----------------------------------- Página Projetos -------------------------------------------------*/
+#conteudoProjetos {
+    height: 100%;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto auto auto 0.1fr;
+}
+#tituloProjetos {
+    grid-column: 1 / 3;
+}
+#efeitoTituloProjetos {
+    width: 3rem;
+    height: 3rem;
+    transform: translate(0.9rem, -4rem);
+}
+/* título portfolio */
+#conteudoProjetos :nth-child(2) {
+    margin-bottom: 0.7rem;
+    padding-left: 0.5rem;
+    grid-column: 1/3;
+}
+#conteudoProjetos :nth-child(3) {
+    margin-left: 10%;
+}
+#conteudoProjetos :nth-child(5) {
+    margin: 1.7rem 1rem 0 2.8rem;
+    grid-column: 1/3;
+}
+
+/* Processo seletivo -----------------*/
+#conteudoProjetos :nth-child(6) {
+    padding-top: 3rem;
+    padding-left: 0.5rem;
+    grid-column: 1/3;
+}
+#efeitoTituloProcessoSeletivo {
+    margin-top: 1rem;
+}
+
+#projetos :nth-child(7) {
+    margin-left: 10%;
+    margin-top: -3.8rem;
+    margin-bottom: 1rem;
+}
+
+#projetos :nth-child(9) {
+    margin: -4rem 1rem 2rem 2.8rem;
+    grid-column: 1/3;
+}
+#efeitoTituloProcessoSeletivo {
+    transform: translate(0.15rem, -3rem);
+    margin-bottom: 0;
+}
+
+#projetos {
+    /* display: none; */
 }
 
 /* Responsividade */
