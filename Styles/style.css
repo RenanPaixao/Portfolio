@@ -187,6 +187,7 @@ nav > div:hover h3 {
 
     background-image: url(../Assets/foto.jpg);
     background-size: cover;
+    background-position: 50% 0%;
 }
 
 #efeitoDireito {
@@ -354,7 +355,7 @@ strong {
     color: var(--cor-verdeDestaque);
 }
 #sobre {
-    /* display: none; */
+    display: none;
 }
 
 /*----------------------------------- Página Projetos -------------------------------------------------*/
@@ -363,6 +364,9 @@ strong {
     display: grid;
     grid-template-columns: auto auto;
     grid-template-rows: auto auto auto auto auto 0.1fr;
+}
+#conteudoProjetos img {
+    width: 23vw;
 }
 #tituloProjetos {
     grid-column: 1 / 3;
@@ -416,7 +420,7 @@ strong {
 }
 
 #projetos {
-    display: none;
+    /* display: none; */
 }
 
 /* Página experiência  ------------------------------------------------*/
@@ -572,10 +576,43 @@ textarea:focus {
 @media screen and (min-width: 1200px) {
 }
 /* Notebooks */
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 960px) and (max-width: 1200px) {
+    /* navbar ajustes-------------------- */
+    nav {
+        margin-left: 0;
+        margin-right: 1%;
+    }
+    /* principal ajustes ---------------- */
+    #fotoPerfil {
+        background-position: 60% 0.4rem;
+    }
+    /* Projetos ajustes ------------------ */
 }
 /* Tablets */
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 720px) and (max-width: 960px) {
+    main {
+        flex-direction: column;
+    }
+    nav {
+        flex-flow: row nowrap;
+        align-items: flex-start;
+        width: 100vw;
+        height: 10vh;
+    }
+    .imagensBotoes {
+        width: 4rem;
+        height: 2rem;
+
+        margin-top: 1rem;
+    }
+    nav h3 {
+        margin-top: 9%;
+    }
+    #botaoSobre {
+        margin-top: 1rem;
+        height: 2.3rem;
+        margin-left: 0;
+    }
 }
 /* Mobile */
 @media screen and (max-width: 576px) {
