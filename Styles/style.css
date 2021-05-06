@@ -352,7 +352,7 @@ strong {
     width: 3rem;
 
     margin-top: -3%;
-    margin-left: 3.5%;
+    margin-left: 2vw;
 }
 
 #tituloSobre span {
@@ -589,7 +589,7 @@ textarea:focus {
     outline-color: var(--cor-verdeDestaque);
 }
 #contato {
-    /* display: none; */
+    display: none;
 }
 
 /* Responsividade */
