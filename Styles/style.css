@@ -485,8 +485,11 @@ h3 {
     width: 3rem;
     height: 3rem;
 
-    margin-top: -2.5%;
-    margin-left: 2.2rem;
+    margin: -10vh 0 0 4.5%;
+    transform: translate(0);
+}
+#tituloContato {
+    margin-bottom: 10%;
 }
 
 #contato h3 {
@@ -551,7 +554,7 @@ form :last-child {
     width: max-content;
 
     display: flex;
-    margin: 2rem 0 2rem 4.5rem;
+    margin: 2rem 0 2rem 5vw;
 
     cursor: pointer;
 }
