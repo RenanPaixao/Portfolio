@@ -626,6 +626,10 @@ textarea:focus {
         right: 0;
         overflow: visible;
     }
+    #conteudoPagina {
+        border-radius: 5px 5px;
+        box-shadow: 0px -1px 2px 1px #00000060;
+    }
     body {
         display: flex;
         justify-content: center;
@@ -654,7 +658,7 @@ textarea:focus {
         box-shadow: 0 2px #34343471;
     }
     nav h3 {
-        margin-top: 12.4vh;
+        margin-top: 90px;
     }
     .imagensBotoes {
         height: 27px;
@@ -675,7 +679,7 @@ textarea:focus {
         margin-top: 80px;
     }
     #divContraste {
-        width: 502px;
+        width: min(100%, 502px);
         height: 99vh;
 
         margin: 79px 0 0;
@@ -706,8 +710,9 @@ textarea:focus {
     #botaoSobre {
         margin-left: 1.8vw;
     }
-}
-@media screen and (max-width: 500px) {
+    #divContraste {
+        height: 121vh;
+    }
 }
 @media screen and (min-width: 320px) and (max-width: 360px) {
     html {
@@ -732,6 +737,9 @@ textarea:focus {
     #sobreSegundaDiv {
         margin: 3vh !important;
     }
+    #conteudoPagina {
+        margin-bottom: -2.3vh;
+    }
 }
 @media screen and (max-width: 260px) {
     footer {
@@ -751,9 +759,3 @@ textarea:focus {
         justify-content: center;
     }
 }
-
-/* @media screen and (max-width: 576px) {
-    html {
-        font-size: 0.85rem;
-    }
-} */
