@@ -75,6 +75,7 @@ nav {
     margin-top: 4%;
 
     background-color: #ffffff;
+    order: 0;
 }
 nav > div {
     width: 100%;
@@ -124,6 +125,7 @@ nav > div:hover h3 {
     margin: 0.9375rem 0 0 1rem;
 
     background: linear-gradient(180deg, rgba(100, 183, 136, 1) 50%, rgba(0, 0, 0, 1) 100%);
+    order: 1;
 }
 /* Tela principal */
 #principal {
@@ -140,6 +142,7 @@ nav > div:hover h3 {
 
     background-color: #ffffff;
     box-shadow: 3px 3px 2px 1px #00000060;
+    order: 2;
 }
 #fotoFundo {
     width: 100%;
@@ -284,6 +287,7 @@ footer h4:hover {
     box-shadow: inset 3px 0 1px #000000cc;
     overflow-y: scroll;
     overflow-x: hidden;
+    order: 3;
 }
 /* Sobre */
 /* Alinhamento */
@@ -363,7 +367,7 @@ strong {
     color: var(--cor-verdeDestaque);
 }
 #sobre {
-    display: none;
+    /* display: none; */
 }
 
 /*----------------------------------- Página Projetos -------------------------------------------------*/
@@ -610,31 +614,148 @@ textarea:focus {
     /* Projetos ajustes ------------------ */
 }
 /* Tablets */
-@media screen and (min-width: 720px) and (max-width: 960px) {
+@media screen and (max-width: 960px) {
+    #divContraste,
+    #principal,
+    #conteudoPagina {
+        z-index: 0;
+        position: relative;
+        width: 100%;
+        height: min-content;
+        margin: 5px 0 0;
+        right: 0;
+        overflow: visible;
+    }
+    #conteudoPagina {
+        border-radius: 5px 5px;
+        box-shadow: 0px -1px 2px 1px #00000060;
+    }
+    body {
+        display: flex;
+        justify-content: center;
+
+        overflow: hidden;
+    }
     main {
+        width: 500px;
+        height: 100%;
+
         flex-direction: column;
+        align-items: center;
+        overflow-y: scroll;
+        overflow-x: hidden;
     }
     nav {
-        flex-flow: row nowrap;
-        align-items: flex-start;
-        width: 100vw;
-        height: 10vh;
-    }
-    .imagensBotoes {
-        width: 4rem;
-        height: 2rem;
+        width: 100%;
+        max-height: 75px;
 
-        margin-top: 1rem;
+        display: flex;
+        position: fixed;
+        flex-flow: row nowrap;
+        left: 0;
+        margin: 2px 0 0 0;
+
+        box-shadow: 0 2px #34343471;
     }
     nav h3 {
-        margin-top: 9%;
+        margin-top: 90px;
+    }
+    .imagensBotoes {
+        height: 27px;
+
+        margin-top: 3vh;
     }
     #botaoSobre {
-        margin-top: 1rem;
-        height: 2.3rem;
-        margin-left: 0;
+        height: 35px;
+
+        margin-left: 1.3vw;
+        margin-top: 3vh;
+    }
+    #resumoLabel {
+        margin-left: 0.1vh;
+    }
+    #principal {
+        min-height: 500px;
+        margin-top: 80px;
+    }
+    #divContraste {
+        width: min(100%, 502px);
+        height: 99vh;
+
+        margin: 79px 0 0;
+        right: 50.3%;
+        position: absolute;
+        transform: translateX(50%);
+        z-index: 0;
+    }
+    #conteudoPagina {
+        margin-top: 4vh;
+    }
+
+    *::-webkit-scrollbar {
+        display: none;
+    }
+    *::-webkit-scrollbar-track {
+        display: none;
+    }
+    *::-webkit-scrollbar-thumb {
+        display: none;
     }
 }
 /* Mobile */
 @media screen and (max-width: 576px) {
+    html {
+        font-size: 0.95rem;
+    }
+    #botaoSobre {
+        margin-left: 1.8vw;
+    }
+    #divContraste {
+        height: 121vh;
+    }
+}
+@media screen and (min-width: 320px) and (max-width: 360px) {
+    html {
+        font-size: 0.9rem;
+    }
+}
+@media screen and (max-width: 320px) {
+    html {
+        font-size: 0.85rem;
+    }
+    footer {
+        padding-left: 2vh;
+        padding-right: 2vh;
+    }
+    #botaoSobre {
+        margin-left: 3.5vw;
+    }
+}
+@media screen and (min-width: 1px) and (max-width: 500px) {
+    #tituloEducacao,
+    #sobrePrimeiraDiv,
+    #sobreSegundaDiv {
+        margin: 3vh !important;
+    }
+    #conteudoPagina {
+        margin-bottom: -2.3vh;
+    }
+}
+@media screen and (max-width: 260px) {
+    footer {
+        font-size: 0.9rem;
+    }
+}
+@media screen and (max-width: 240px) {
+    html {
+        font-size: 0.8rem;
+    }
+
+    #botaoContato {
+        display: none;
+    }
+    footer {
+        font-size: 1.3rem;
+        justify-content: center;
+    }
 }
