@@ -433,7 +433,7 @@ strong {
 }
 
 #projetos {
-    /* display: none; */
+    display: none;
 }
 
 /* Página experiência  ------------------------------------------------*/
@@ -481,7 +481,7 @@ h3 {
 }
 
 #experiencia {
-    display: none;
+    /* display: none; */
 }
 
 /* pagina contato----------------------------------- */
@@ -701,6 +701,12 @@ textarea:focus {
     #projetos h4 {
         margin-left: 2vh !important;
     }
+    #experienciafotoSeed {
+        margin-bottom: 2vh;
+    }
+    #experienciaSeedResumo {
+        margin-bottom: 2rem !important;
+    }
     *::-webkit-scrollbar {
         display: none;
     }
@@ -736,6 +742,15 @@ textarea:focus {
         margin-left: -1%;
     }
 }
+@media screen and (max-width: 419px) {
+    #tituloContainerExperiencia {
+        flex-direction: column;
+    }
+    #tituloContainerExperiencia h2 {
+        margin-bottom: 2vh;
+    }
+}
+
 @media screen and (max-width: 320px) {
     #tituloSobre h6 {
         width: 10%;
