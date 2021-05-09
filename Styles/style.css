@@ -720,6 +720,16 @@ textarea:focus {
         left: 50%;
         transform: translate(-50%, 55%);
     }
+    #tituloSobre h6 {
+        margin: -4vw 0 0 -2vw;
+    }
+}
+@media screen and (max-width: 320px) {
+    #tituloSobre h6 {
+        width: 10%;
+        height: 30px;
+        transform: translate(7%, -130%);
+    }
 }
 @media screen and (min-width: 320px) and (max-width: 360px) {
     html {
@@ -751,6 +761,9 @@ textarea:focus {
 @media screen and (max-width: 260px) {
     footer {
         font-size: 0.9rem;
+    }
+    #tituloSobre h6 {
+        transform: translate(9%, -130%);
     }
 }
 @media screen and (max-width: 240px) {
