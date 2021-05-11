@@ -16,19 +16,19 @@
             
         </div>
         <nav>
-            <div>
+            <div onclick="Pagina.esconderPaginas();Pagina.mostrarPagina('sobre')">
                 <img id="botaoSobre" class="imagensBotoes" src="Assets/sobre.svg" alt="Sobre">
                  <h3 id="resumoLabel">RESUMO</h3>
             </div>
-            <div>
+            <div onclick="Pagina.esconderPaginas();Pagina.mostrarPagina('projetos')">
                 <img id="botaoProjetos" class="imagensBotoes" src="Assets/projetos.svg" alt="Mostrar projetos">
                 <h3>PROJETOS</h3>
             </div>
-            <div>
+            <div onclick="Pagina.esconderPaginas();Pagina.mostrarPagina('experiencia')">
                 <img class="imagensBotoes" src="Assets/experience.svg" alt="Mostrar experiência">
                 <h3>EXPERIÊNCIA</h3>
             </div>
-            <div>
+            <div onclick="Pagina.esconderPaginas();Pagina.mostrarPagina('contato')">
                 <img class="imagensBotoes" src="Assets/contato.svg" alt="Entrar em contato">
                 <h3>CONTATO</h3>
             </div>
@@ -62,7 +62,7 @@
             
             <footer>
                 <h4>DOWNLOAD CV <span><img id="iconeBaixar" src="Assets/download.png" alt="Baixar currículo"></span></h4>
-                <h4 id="botaoContato">CONTATO <span><img id="iconeEnviar" src="Assets/send.png" alt=""></span></h4>
+                <h4 id="botaoContato" onclick="Pagina.esconderPaginas();Pagina.mostrarPagina('contato')">CONTATO <span><img id="iconeEnviar" src="Assets/send.png" alt=""></span></h4>
             </footer>
         </section>
         
@@ -74,7 +74,7 @@
                 </div>
                 <div id="sobrePrimeiraDiv">
                     <h4>Oi! Meu nome é Renan.</h4>
-                    <p>Desenvolvedor front end apaixonado por tecnologia, com experiência na construção de sites em <strong>HTML</strong>, <strong>CSS</strong> e <strong>JAVASCRIPT</strong>.<br>
+                    <p>Desenvolvedor Front End apaixonado por tecnologia, com experiência na construção de sites em <strong>HTML</strong>, <strong>CSS</strong> e <strong>JAVASCRIPT</strong>.<br>
                         Atualmente resido em <strong>Carpina</strong>, interior de <strong>Pernambuco</strong>, e tenho <strong>20 anos</strong>.
                     </p>
                 </div>
@@ -140,7 +140,7 @@
                     <form action="">
                         <input type="text" placeholder="Nome Completo">
                         <input type="text" placeholder="Email">
-                        <textarea wrap="hard" placeholder="mensagem"></textarea>
+                        <textarea id="textareaContato" wrap="hard" placeholder="mensagem"></textarea>
                     </form>
                     <div id="botaoEnviaMensagem">
                         <h4>Enviar mensagem</h4>
@@ -150,7 +150,7 @@
             </div>
         </section>
     </main>
-
+    <script type="text/javascript" src="Scripts/script.js"></script>
 </body>
 
 </html>
