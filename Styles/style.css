@@ -757,6 +757,10 @@ textarea:focus {
 	#efeitoTituloContato {
 		margin: -9vh 0 0 -0.9vh !important;
 	}
+	#efeitoTituloEducacao {
+		margin: -8vh 0 0 0 !important;
+		transform: none;
+	}
 }
 @media screen and (max-width: 419px) {
 	#tituloContainerExperiencia {
