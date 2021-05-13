@@ -259,6 +259,9 @@ footer img {
 footer h4 {
 	cursor: pointer;
 }
+footer :link {
+	color: #000000;
+}
 footer h4:hover {
 	filter: invert(75%) sepia(74%) saturate(6107%) hue-rotate(79deg) brightness(92%) contrast(91%);
 }
