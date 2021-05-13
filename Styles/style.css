@@ -593,6 +593,13 @@ textarea:focus {
 	display: none;
 }
 
+#emConstrucao {
+	width: 170px;
+	height: 60px;
+	position: absolute;
+	right: 0;
+}
+
 /* Responsividade */
 /* Desktop */
 @media screen and (min-width: 1200px) {
@@ -704,6 +711,10 @@ textarea:focus {
 	#experienciaSeedResumo {
 		margin-bottom: 2rem !important;
 	}
+	#emConstrucao {
+		margin-top: 75px;
+		z-index: 5;
+	}
 	*::-webkit-scrollbar {
 		display: none;
 	}
@@ -753,6 +764,10 @@ textarea:focus {
 	}
 	#tituloContainerExperiencia h2 {
 		margin-bottom: 2vh;
+	}
+	#emConstrucao {
+		width: 130px;
+		height: 45px;
 	}
 }
 
