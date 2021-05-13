@@ -259,6 +259,9 @@ footer img {
 footer h4 {
 	cursor: pointer;
 }
+footer :link {
+	color: #000000;
+}
 footer h4:hover {
 	filter: invert(75%) sepia(74%) saturate(6107%) hue-rotate(79deg) brightness(92%) contrast(91%);
 }
@@ -491,10 +494,6 @@ h3 {
 	margin: -10vh 0 0 4.5%;
 	transform: translate(0);
 }
-#tituloContato {
-	margin-bottom: 10%;
-}
-
 #contato h3 {
 	color: #000000;
 }
@@ -511,6 +510,9 @@ h3 {
 	position: relative;
 	margin: 1rem 3.5rem;
 }
+#telefone {
+	margin-top: 10%;
+}
 .informacoesContato span {
 	margin-left: 1%;
 	color: var(--cor-texto) !important;
@@ -526,6 +528,7 @@ h6 {
 }
 
 #tituloForm h6 {
+	position: relative;
 	width: 3rem;
 	height: 3rem;
 	margin: -3vh 0 0 2.5vw;
@@ -664,6 +667,9 @@ textarea:focus {
 	nav h3 {
 		margin-top: 90px;
 	}
+	#tituloContato {
+		align-items: center;
+	}
 	.imagensBotoes {
 		height: 27px;
 
@@ -711,6 +717,9 @@ textarea:focus {
 	#experienciaSeedResumo {
 		margin-bottom: 2rem !important;
 	}
+	#tituloContato span {
+		margin-top: 5px;
+	}
 	#emConstrucao {
 		margin-top: 75px;
 		z-index: 5;
@@ -737,11 +746,22 @@ textarea:focus {
 		height: 121vh;
 	}
 }
-@media screen and (max-width: 940px) and (min-width: 500px) {
+@media screen and (max-width: 940px) and (min-width: 760px) {
+	#efeitoTituloContato {
+		margin: -10vh 0 0 0.8rem;
+	}
+}
+@media screen and (max-width: 760px) and (min-width: 600px) {
 	#efeitoTituloContato {
 		margin: -10vh 0 0 0.4rem;
 	}
 }
+@media screen and (max-width: 600px) and (min-width: 500px) {
+	#efeitoTituloContato {
+		margin: -10vh 0 0 0.1rem;
+	}
+}
+
 @media screen and (max-width: 500px) {
 	#circulo {
 		width: 115px;
@@ -757,6 +777,10 @@ textarea:focus {
 	#efeitoTituloContato {
 		margin: -9vh 0 0 -0.9vh !important;
 	}
+	#efeitoTituloEducacao {
+		margin: -8vh 0 0 0 !important;
+		transform: none;
+	}
 }
 @media screen and (max-width: 419px) {
 	#tituloContainerExperiencia {
@@ -771,13 +795,6 @@ textarea:focus {
 	}
 }
 
-@media screen and (max-width: 320px) {
-	#tituloSobre h6 {
-		width: 10%;
-		height: 30px;
-		transform: translate(7%, -130%);
-	}
-}
 @media screen and (min-width: 320px) and (max-width: 360px) {
 	html {
 		font-size: 0.9rem;
@@ -786,6 +803,16 @@ textarea:focus {
 @media screen and (max-width: 320px) {
 	html {
 		font-size: 0.85rem;
+	}
+	#tituloSobre h6 {
+		transform: translate(7%, -130%);
+		width: 2.5rem;
+		height: 2.5rem;
+		margin: -8px 0 0 -0.5rem;
+	}
+	#efeitoTituloEducacao {
+		margin-left: 1vw !important;
+		margin-top: -3.5rem !important;
 	}
 	footer {
 		padding-left: 2vh;
@@ -798,6 +825,9 @@ textarea:focus {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+	}
+	#tituloContato span {
+		margin-top: 8px;
 	}
 	#efeitoTituloContato {
 		margin: -9vh 0 0 -0.9vh !important;
