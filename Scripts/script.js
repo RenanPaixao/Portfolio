@@ -10,7 +10,7 @@ const Pagina = {
 			var erro = new Error('nome da pagina não encontrado para visualizar');
 			alert(erro);
 		}
-		Utils.comportamentoDeRadio();
+		Utils.ativaComportamentoDeRadio();
 	},
 	esconderPaginas() {
 		document.getElementById('sobre').style.display = 'none';
@@ -69,12 +69,14 @@ const Utils = {
 			}
 		}
 	},
-	comportamentoDeRadio(init) {
+	retiraComportamentoDeRadio() {
 		this.navElementos.forEach((elemento) => {
 			elemento.classList.remove('comportamentoDeRadio');
 		});
-
-		if (init === true && init !== null) {
+	},
+	ativaComportamentoDeRadio(init) {
+		this.retiraComportamentoDeRadio();
+		if (init === true) {
 			this.navElementos[0].setAttribute('class', 'comportamentoDeRadio');
 		} else {
 			for (const valor of this.paginas.entries()) {
@@ -88,7 +90,7 @@ const Utils = {
 
 function init() {
 	try {
-		Utils.comportamentoDeRadio(true);
+		Utils.ativaComportamentoDeRadio(true);
 		Utils.Placeholder.escondePlaceholder();
 		Utils.Placeholder.mostrarPlaceholder();
 	} catch (error) {
