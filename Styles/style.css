@@ -1,13 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@keyframes botoesHover {
-	10% {
-		border-bottom: solid 2px #000000;
-	}
-	100% {
-		padding: 0 1% 1% 0;
-		border-bottom: solid 2px #000000;
-	}
-}
+
 :root {
 	--cor-bgPrincipal: #3f1a30;
 	--cor-bgContraste: #64b788;
@@ -540,14 +532,15 @@ form {
 	display: flex;
 	flex-direction: column;
 }
-form input {
+form input,
+form textarea {
 	width: 80%;
 	height: 2rem;
 
 	margin: 0.5rem 0;
 	align-self: center;
 }
-form :last-child {
+form textarea {
 	width: 80%;
 	height: 4rem;
 
@@ -556,7 +549,7 @@ form :last-child {
 	resize: none;
 }
 
-#botaoEnviaMensagem {
+#botaoEnviaMensagem label {
 	width: max-content;
 
 	display: flex;
@@ -571,11 +564,11 @@ form :last-child {
 	100% {
 	}
 }
-#botaoEnviaMensagem:hover {
+#botaoEnviaMensagem label:hover {
 	animation: botoesHover 0.5s forwards ease-in-out;
 	filter: invert(75%) sepia(74%) saturate(6107%) hue-rotate(79deg) brightness(92%) contrast(91%);
 }
-#botaoEnviaMensagem:hover img {
+#botaoEnviaMensagem label:hover img {
 	animation: aviaoDePapel 1s ease-in;
 }
 
@@ -601,6 +594,10 @@ textarea:focus {
 	height: 60px;
 	position: absolute;
 	right: 0;
+	display: none;
+}
+#js_send {
+	display: none;
 }
 
 /* Responsividade */

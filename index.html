@@ -138,19 +138,92 @@
                         <h3  class="tituloConteudo"><span>Quer</span> entrar em contato?</h3>
                         <h6 id="efeitoTituloPortfolio" class="efeitoTitulo"></h6>
                     </div>
-                    <form action="">
-                        <input type="text" placeholder="Nome Completo">
-                        <input type="text" placeholder="Email">
-                        <textarea id="textareaContato" wrap="hard" placeholder="mensagem"></textarea>
+                    <form id="javascript_form">
+                        <input type="text" name="subject" placeholder="Nome Completo*" required>
+                        <input type="text" name="reply_to" placeholder="Email*" required />
+                        <textarea id="textareaContato" name="text" wrap="hard" placeholder="Mensagem*" required></textarea>  
+                        <input type="submit" id="js_send" value="Send" />
+                        <div id="botaoEnviaMensagem">
+                            <label for="js_send"><h4 id="mensagemBotaoEnviar">Enviar mensagem</h4>
+                            <img src="Assets/send.png" alt="Botão enviar mensagem"></label>
+                        </div>
                     </form>
-                    <div id="botaoEnviaMensagem">
-                        <h4>Enviar mensagem</h4>
-                        <img src="Assets/send.png" alt="Botão enviar mensagem">
-                    </div>
                 </div>
             </div>
         </section>
     </main>
+    <script>       
+        //update this with your js_form selector
+        var form_id_js = "javascript_form";
+    
+        var data_js = {
+            "access_token": "lspfasz0cuoetj41hgnibrsl"
+        };
+    
+        function js_onSuccess() {
+            // remove this to avoid redirect
+            window.location = window.location.pathname + "?message=Email+Successfully+Sent%21&isError=0";
+        }
+    
+        function js_onError(error) {
+            // remove this to avoid redirect
+            window.location = window.location.pathname + "?message=Email+could+not+be+sent.&isError=1";
+        }
+    
+        var sendButton = document.getElementById("js_send");
+    
+        function js_send() {
+            mensagemBotao = document.getElementById('mensagemBotaoEnviar')
+            mensagemBotao.textContent = 'Enviando...';
+            sendButton.disabled=true;
+            var request = new XMLHttpRequest();
+            request.onreadystatechange = function() {
+                if (request.readyState == 4 && request.status == 200) {
+                    js_onSuccess();
+                } else
+                if(request.readyState == 4) {
+                    js_onError(request.response);
+                }
+            };
+    
+            var subject = document.querySelector("#" + form_id_js + " [name='subject']").value;
+            var email = document.querySelector("#" + form_id_js + " [name='reply_to']").value;
+            var message = document.querySelector("#" + form_id_js + " [name='text']").value;
+            data_js['subject'] = subject.trim();
+            data_js['text'] = "Email: "+ email.trim() + "\nMensagem: "+ message.trim();
+            var params = toParams(data_js);
+
+            if(subject.trim() === "" || email.trim() === "" || message.trim() == "" ){
+                alert("Preencha todos os campos")
+                mensagemBotao.textContent = 'Enviar mensagem';
+                sendButton.disabled = false;
+                return false
+            }
+    
+            request.open("POST", "https://postmail.invotes.com/send", true);
+            request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    
+            request.send(params);
+    
+            return false;
+        }
+    
+        sendButton.onclick = js_send;
+    
+        function toParams(data_js) {
+            var form_data = [];
+            for ( var key in data_js ) {
+                form_data.push(encodeURIComponent(key) + "=" + encodeURIComponent(data_js[key]));
+            }
+    
+            return form_data.join("&");
+        }
+    
+        var js_form = document.getElementById(form_id_js);
+        js_form.addEventListener("submit", function (e) {
+            e.preventDefault();
+        });
+    </script>
     <script type="text/javascript" src="Scripts/script.js"></script>
 </body>
 
