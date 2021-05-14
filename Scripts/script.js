@@ -10,6 +10,7 @@ const Pagina = {
 			var erro = new Error('nome da pagina não encontrado para visualizar');
 			alert(erro);
 		}
+		Utils.comportamentoDeRadio();
 	},
 	esconderPaginas() {
 		document.getElementById('sobre').style.display = 'none';
@@ -20,6 +21,13 @@ const Pagina = {
 };
 
 const Utils = {
+	paginas: [
+		document.getElementById('sobre'),
+		document.getElementById('projetos'),
+		document.getElementById('experiencia'),
+		document.getElementById('contato'),
+	],
+	navElementos: Array.from(document.querySelectorAll('nav > div')),
 	Placeholder: {
 		escondePlaceholder() {
 			var input = document.getElementsByTagName('input');
@@ -61,10 +69,26 @@ const Utils = {
 			}
 		}
 	},
+	comportamentoDeRadio(init) {
+		this.navElementos.forEach((elemento) => {
+			elemento.classList.remove('comportamentoDeRadio');
+		});
+
+		if (init === true && init !== null) {
+			this.navElementos[0].setAttribute('class', 'comportamentoDeRadio');
+		} else {
+			for (const valor of this.paginas.entries()) {
+				if (valor[1].style.display !== 'none') {
+					this.navElementos[valor[0]].setAttribute('class', 'comportamentoDeRadio');
+				}
+			}
+		}
+	},
 };
 
 function init() {
 	try {
+		Utils.comportamentoDeRadio(true);
 		Utils.Placeholder.escondePlaceholder();
 		Utils.Placeholder.mostrarPlaceholder();
 	} catch (error) {
