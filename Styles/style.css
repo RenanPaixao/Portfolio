@@ -540,14 +540,15 @@ form {
 	display: flex;
 	flex-direction: column;
 }
-form input {
+form input,
+form textarea {
 	width: 80%;
 	height: 2rem;
 
 	margin: 0.5rem 0;
 	align-self: center;
 }
-form :last-child {
+form textarea {
 	width: 80%;
 	height: 4rem;
 
@@ -556,7 +557,7 @@ form :last-child {
 	resize: none;
 }
 
-#botaoEnviaMensagem {
+#botaoEnviaMensagem label {
 	width: max-content;
 
 	display: flex;
@@ -601,6 +602,9 @@ textarea:focus {
 	height: 60px;
 	position: absolute;
 	right: 0;
+}
+#js_send {
+	display: none;
 }
 
 /* Responsividade */
