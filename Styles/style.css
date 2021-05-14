@@ -564,11 +564,11 @@ form textarea {
 	100% {
 	}
 }
-#botaoEnviaMensagem:hover {
+#botaoEnviaMensagem label:hover {
 	animation: botoesHover 0.5s forwards ease-in-out;
 	filter: invert(75%) sepia(74%) saturate(6107%) hue-rotate(79deg) brightness(92%) contrast(91%);
 }
-#botaoEnviaMensagem:hover img {
+#botaoEnviaMensagem label:hover img {
 	animation: aviaoDePapel 1s ease-in;
 }
 
