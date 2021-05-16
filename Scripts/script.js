@@ -73,15 +73,15 @@ const Utils = {
 		mostrarPlaceholder() {
 			var input = document.getElementsByTagName('input');
 			document.getElementById('textareaContato').addEventListener('focusout', () => {
-				document.getElementById('textareaContato').placeholder = 'Mensagem';
+				document.getElementById('textareaContato').placeholder = 'Mensagem*';
 			});
 
 			input = Array.from(input);
 			input[0].addEventListener('focusout', () => {
-				input[0].placeholder = 'Nome Completo';
+				input[0].placeholder = 'Nome Completo*';
 			});
 			input[1].addEventListener('focusout', () => {
-				input[1].placeholder = 'Email';
+				input[1].placeholder = 'Email*';
 			});
 		},
 	},
