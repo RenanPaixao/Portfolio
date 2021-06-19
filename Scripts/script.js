@@ -78,7 +78,7 @@ const Utils = {
 
 			input = Array.from(input);
 			input[0].addEventListener('focusout', () => {
-				input[0].placeholder = 'Nome Completo*';
+				input[0].placeholder = 'Nome e Sobrenome*';
 			});
 			input[1].addEventListener('focusout', () => {
 				input[1].placeholder = 'Email*';
