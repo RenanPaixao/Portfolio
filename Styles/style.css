@@ -216,6 +216,7 @@ nav > div:hover h3 {
 	font-size: 1.125rem;
 	color: var(--cor-verdeCargo);
 }
+
 #conteudoPrincipal > h2 {
 	position: relative;
 	justify-self: center;
@@ -290,29 +291,25 @@ footer h4:hover {
 }
 /* Sobre -----------------------------------------*/
 /* Alinhamento */
-.tituloConteudo {
-	height: 15vh;
+.tituloTopo {
+	height: 6rem;
 
 	display: flex;
 	margin-left: -2%;
 	align-items: center;
-	padding: 3vh 0 0 5vw;
+	padding: 2rem 0 1.5rem;
 
-	font-size: 1.6rem;
+	font-size: 1.7rem;
 	font-weight: 500;
 	border-bottom: solid 1px #000000a9;
+}
+.tituloTopo h2 {
+	margin-left: 3.5rem;
 }
 #sobre div:nth-child(2) {
 	margin: 2.1rem 1rem 2rem 3rem;
 }
-.segundoTitulo {
-	margin-left: 3.75rem;
-	position: relative;
-	z-index: 2;
 
-	font-size: 1.3rem;
-	font-weight: 450;
-}
 #sobre div:nth-child(2) h4 {
 	margin-bottom: 0.5rem;
 
@@ -339,28 +336,18 @@ strong {
 }
 
 /* Círculos com efeito */
-.efeitoTitulo {
-	height: 2.3rem;
-	width: 2.3rem;
+.circuloEfeito {
 	border-radius: 50%;
-
-	margin-left: 2.5rem;
 	position: relative;
 	z-index: -1;
-	transform: translateY(-88%);
-
 	background: linear-gradient(90deg, rgba(128, 255, 168, 1) 2%, rgba(255, 255, 255, 1) 100%);
 }
-#efeitoTituloSobre {
+.circuloGrandeTamanho {
 	height: 3rem;
 	width: 3rem;
-
-	margin-top: -3%;
-	margin-left: 2vw;
 }
-
-#tituloSobre span {
-	margin-right: 1%;
+.configGridTitulo {
+	grid-column: 1 / 3;
 }
 
 #conteudoPagina span {
@@ -381,16 +368,7 @@ strong {
 .margemDaImagemEsquerda {
 	margin-left: 10%;
 }
-#tituloProjetos {
-	margin-bottom: 2rem;
-	grid-column: 1 / 3;
-}
-#efeitoTituloProjetos {
-	width: 3rem;
-	height: 3rem;
-	margin-top: -3vh;
-	margin-left: 2vw;
-}
+
 /* título portfolio */
 #conteudoProjetos :nth-child(2) {
 	margin-bottom: 0.5rem;
@@ -403,21 +381,10 @@ strong {
 	color: #000000;
 }
 
-#efeitoTituloProcessoSeletivo {
-	margin-top: 1rem;
-}
-
 #projetos .descricao {
 	margin: 2.2rem 1rem 2rem 2.8rem;
 	grid-column: 1/3;
 	padding-bottom: 4rem;
-}
-.esticaTitulo {
-	grid-column: 1/3;
-}
-#efeitoTituloProcessoSeletivo {
-	transform: translate(0.15rem, -3rem);
-	margin-bottom: 0;
 }
 
 #projetos {
@@ -438,7 +405,6 @@ strong {
 	margin: 3rem 2rem 0 1.5rem;
 	overflow-x: hidden;
 }
-#containerExperiencia #tituloContainerExperiencia,
 h3 {
 	position: absolute;
 
@@ -458,14 +424,9 @@ h3 {
 	margin: 6rem 5% 2%;
 	align-self: flex-end;
 }
-
-#tituloContainerExperiencia {
-	width: 82%;
-
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	margin: 2% 0 0 2%;
+.mouseLink {
+	cursor: initial;
+	height: min-content;
 }
 
 #experiencia {
@@ -473,13 +434,7 @@ h3 {
 }
 
 /* pagina contato----------------------------------- */
-#efeitoTituloContato {
-	width: 3rem;
-	height: 3rem;
 
-	margin: -10vh 0 0 4.5%;
-	transform: translate(0);
-}
 #contato h3 {
 	color: #000000;
 }
@@ -503,25 +458,13 @@ h3 {
 	margin-left: 1%;
 	color: var(--cor-texto) !important;
 }
-#tituloForm {
-	margin: 0 0 -4% 1vw;
-}
-#tituloForm h3,
+
 h6 {
 	position: relative;
 	font-size: 1.6rem;
 	border: none;
 }
 
-#tituloForm h6 {
-	position: relative;
-	width: 3rem;
-	height: 3rem;
-	margin: -3vh 0 0 2.5vw;
-}
-#tituloForm span {
-	margin-right: 1%;
-}
 form {
 	display: flex;
 	flex-direction: column;
@@ -624,6 +567,7 @@ textarea:focus {
 		right: 0;
 		overflow: visible;
 	}
+
 	#conteudoPagina {
 		border-radius: 5px 5px;
 		box-shadow: 0px -1px 2px 1px #00000060;
@@ -658,9 +602,7 @@ textarea:focus {
 	nav h3 {
 		margin-top: 90px;
 	}
-	#tituloContato {
-		align-items: center;
-	}
+
 	.imagensBotoes {
 		height: 27px;
 
@@ -708,9 +650,7 @@ textarea:focus {
 	#experienciaSeedResumo {
 		margin-bottom: 2rem !important;
 	}
-	#tituloContato span {
-		margin-top: 5px;
-	}
+
 	#emConstrucao {
 		margin-top: 75px;
 		z-index: 5;
@@ -737,49 +677,15 @@ textarea:focus {
 		height: 121vh;
 	}
 }
-@media screen and (max-width: 940px) and (min-width: 760px) {
-	#efeitoTituloContato {
-		margin: -10vh 0 0 0.8rem;
-	}
-}
-@media screen and (max-width: 760px) and (min-width: 600px) {
-	#efeitoTituloContato {
-		margin: -10vh 0 0 0.4rem;
-	}
-}
-@media screen and (max-width: 600px) and (min-width: 500px) {
-	#efeitoTituloContato {
-		margin: -10vh 0 0 0.1rem;
-	}
-}
 
 @media screen and (max-width: 500px) {
-	#circulo {
+	/* #circulo {
 		width: 115px;
 		left: 50%;
 		transform: translate(-50%, 55%);
-	}
-	#tituloSobre h6 {
-		margin: -4vw 0 0 -2vw;
-	}
-	#efeitoTituloProjetos {
-		margin-left: -1%;
-	}
-	#efeitoTituloContato {
-		margin: -9vh 0 0 -0.9vh !important;
-	}
-	#efeitoTituloEducacao {
-		margin: -8vh 0 0 0 !important;
-		transform: none;
-	}
+	} */
 }
 @media screen and (max-width: 419px) {
-	#tituloContainerExperiencia {
-		flex-direction: column;
-	}
-	#tituloContainerExperiencia h2 {
-		margin-bottom: 2vh;
-	}
 	#emConstrucao {
 		width: 130px;
 		height: 45px;
@@ -795,16 +701,7 @@ textarea:focus {
 	html {
 		font-size: 0.85rem;
 	}
-	#tituloSobre h6 {
-		transform: translate(7%, -130%);
-		width: 2.5rem;
-		height: 2.5rem;
-		margin: -8px 0 0 -0.5rem;
-	}
-	#efeitoTituloEducacao {
-		margin-left: 1vw !important;
-		margin-top: -3.5rem !important;
-	}
+
 	footer {
 		padding-left: 2vh;
 		padding-right: 2vh;
@@ -817,27 +714,9 @@ textarea:focus {
 		flex-direction: column;
 		align-items: center;
 	}
-	#tituloContato span {
-		margin-top: 8px;
-	}
-	#efeitoTituloContato {
-		margin: -9vh 0 0 -0.9vh !important;
-	}
-	#contato h3.tituloConteudo {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-	}
-	#contato #efeitoTituloPortfolio {
-		transform: translate(-110%, -132%);
-		right: -50%;
-	}
-	#contato .tituloConteudo span {
-		margin-bottom: 0.8vh;
-	}
 }
+
 @media screen and (min-width: 1px) and (max-width: 500px) {
-	#tituloEducacao,
 	#sobrePrimeiraDiv,
 	#sobreSegundaDiv {
 		margin: 3vh !important;
@@ -849,9 +728,6 @@ textarea:focus {
 @media screen and (max-width: 260px) {
 	footer {
 		font-size: 0.9rem;
-	}
-	#tituloSobre h6 {
-		transform: translate(9%, -130%);
 	}
 }
 @media screen and (max-width: 240px) {
