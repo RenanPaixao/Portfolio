@@ -304,6 +304,7 @@ footer h4:hover {
 	border-bottom: solid 1px #000000a9;
 }
 .tituloTopo h2 {
+	position: absolute;
 	margin-left: 3.5rem;
 }
 #sobre div:nth-child(2) {
@@ -336,15 +337,16 @@ strong {
 }
 
 /* Círculos com efeito */
-.circuloEfeito {
+.tituloEfeito {
 	border-radius: 50%;
 	position: relative;
 	z-index: -1;
 	background: linear-gradient(90deg, rgba(128, 255, 168, 1) 2%, rgba(255, 255, 255, 1) 100%);
 }
-.circuloGrandeTamanho {
+.tituloEfeitoTamanhoGrande {
 	height: 3rem;
 	width: 3rem;
+	margin-left: 2rem;
 }
 .configGridTitulo {
 	grid-column: 1 / 3;
@@ -573,6 +575,9 @@ textarea:focus {
 	.tituloTopo h2 {
 		margin-left: 2.5rem;
 	}
+	.tituloEfeitoTamanhoGrande {
+		margin-left: 1.3rem;
+	}
 
 	#conteudoPagina {
 		border-radius: 5px 5px;
@@ -685,11 +690,11 @@ textarea:focus {
 }
 
 @media screen and (max-width: 500px) {
-	/* #circulo {
+	#circulo {
 		width: 115px;
 		left: 50%;
 		transform: translate(-50%, 55%);
-	} */
+	}
 }
 @media screen and (max-width: 419px) {
 	#emConstrucao {
