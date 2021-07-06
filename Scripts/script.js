@@ -1,11 +1,11 @@
 const Pagina = {
 	mostrarPagina(nomeDaPagina) {
 		if (nomeDaPagina === 'sobre' || nomeDaPagina === 'projetos' || nomeDaPagina === 'contato') {
-			document.getElementById(`${nomeDaPagina}`).style.display = 'inline';
-			Utils.rolarParaConteudo('inline');
+			document.getElementById(nomeDaPagina).style.display = 'initial';
+			Utils.rolarParaConteudo(nomeDaPagina);
 		} else if (nomeDaPagina === 'experiencia') {
-			document.getElementById(`${nomeDaPagina}`).style.display = 'flex';
-			Utils.rolarParaConteudo('flex');
+			document.getElementById(nomeDaPagina).style.display = 'flex';
+			Utils.rolarParaConteudo(nomeDaPagina);
 		} else {
 			var erro = new Error('nome da pagina não encontrado para visualizar');
 			alert(erro);
@@ -85,15 +85,19 @@ const Utils = {
 			});
 		},
 	},
-	rolarParaConteudo(display) {
-		if (display === 'inline') document.getElementById('botaoContato').scrollIntoView({ behavior: 'smooth' });
-		else {
+	rolarParaConteudo(nome) {
+		if (nome === 'sobre') {
+			document.getElementById('rolagemSobre').scrollIntoView({ behavior: 'smooth', block: 'end' });
+		} else if (nome === 'projetos') {
+			document.getElementById('rolagemProjetos').scrollIntoView({ behavior: 'smooth', block: 'end' });
+		} else if (nome === 'contato') {
+			document.getElementById('botaoEnviaMensagem').scrollIntoView({ behavior: 'smooth', block: 'end' });
+		}
+		if (nome === 'experiencia') {
 			var experiencia = document.getElementById('experiencia');
 
 			if (experiencia.style.display === 'flex') {
 				document.getElementById('containerExperiencia').scrollIntoView({ behavior: 'smooth', block: 'end' });
-			} else {
-				document.getElementById('conteudoPrincipal').scrollIntoView({ behavior: 'smooth' });
 			}
 		}
 	},
