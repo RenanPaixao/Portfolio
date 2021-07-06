@@ -307,6 +307,20 @@ footer h4:hover {
 	position: absolute;
 	margin-left: 3.5rem;
 }
+.tituloArtigo {
+	height: 4rem;
+
+	display: flex;
+	align-items: flex-end;
+	margin-left: 2rem;
+
+	font-size: 1.3rem;
+	font-weight: 450;
+}
+#margemPrimeiroTitulo {
+	height: 6rem;
+}
+
 #sobre div:nth-child(2) {
 	margin: 2.1rem 1rem 2rem 3rem;
 }
@@ -361,7 +375,11 @@ strong {
 	height: 100%;
 	display: grid;
 	grid-template-columns: auto auto;
-	grid-template-rows: auto auto auto auto auto auto;
+	grid-template-rows: auto 7rem auto;
+}
+#ultimaDescricao {
+	height: max-content;
+	padding-bottom: 2rem;
 }
 #conteudoProjetos img {
 	width: 22vw;
@@ -384,9 +402,11 @@ strong {
 }
 
 #projetos .descricao {
-	margin: 2.2rem 1rem 2rem 2.8rem;
+	margin: 2.2rem 1rem 1rem 2.8rem;
 	grid-column: 1/3;
-	padding-bottom: 4rem;
+}
+.imagemProjetos {
+	margin-top: 2rem;
 }
 
 #projetos {
