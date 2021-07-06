@@ -297,7 +297,7 @@ footer h4:hover {
 	display: flex;
 	margin-left: -2%;
 	align-items: center;
-	padding: 2rem 0 1.5rem;
+	padding: 2rem 0 1.5rem 1rem;
 
 	font-size: 1.7rem;
 	font-weight: 500;
@@ -312,17 +312,29 @@ footer h4:hover {
 
 	display: flex;
 	align-items: flex-end;
-	margin-left: 2rem;
+	margin-left: 3rem;
 
 	font-size: 1.3rem;
 	font-weight: 450;
 }
+
+.marginTituloArtigo {
+	margin: 2rem 0 2rem 0.3rem;
+}
+
 #margemPrimeiroTitulo {
 	height: 6rem;
 }
 
 #sobre div:nth-child(2) {
 	margin: 2.1rem 1rem 2rem 3rem;
+}
+#sobrePrimeiraDiv {
+	margin-top: 4rem !important;
+}
+
+#sobre div:nth-child(2) h3 {
+	color: #000000;
 }
 
 #sobre div:nth-child(2) h4 {
@@ -361,6 +373,16 @@ strong {
 	height: 3rem;
 	width: 3rem;
 	margin-left: 2rem;
+}
+.tituloEfeitoTamanhoPequeno {
+	height: 2.3rem;
+	width: 2.3rem;
+
+	margin-left: -1.1rem;
+	transform: translateY(5px);
+}
+.projetos {
+	transform: translateY(10px);
 }
 .configGridTitulo {
 	grid-column: 1 / 3;
@@ -666,8 +688,8 @@ textarea:focus {
 		margin-top: 4vh;
 	}
 	#projetos img {
-		margin: 0 0 2vh 0 !important;
-		width: 65% !important;
+		margin-left: 0;
+		width: 65%;
 		min-width: 250px;
 		justify-self: center;
 		grid-column: 1/3;
@@ -748,8 +770,7 @@ textarea:focus {
 }
 
 @media screen and (min-width: 1px) and (max-width: 500px) {
-	#sobrePrimeiraDiv,
-	#sobreSegundaDiv {
+	#sobrePrimeiraDiv {
 		margin: 3vh !important;
 	}
 	#conteudoPagina {
