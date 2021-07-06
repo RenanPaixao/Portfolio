@@ -449,6 +449,15 @@ strong {
 	margin: 3rem 2rem 0 1.5rem;
 	overflow-x: hidden;
 }
+#tituloContainerExperiencia {
+	width: 82%;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 2% 0 0 2%;
+}
+#containerExperiencia #tituloContainerExperiencia,
 h3 {
 	position: absolute;
 
@@ -503,26 +512,20 @@ h3 {
 	color: var(--cor-texto) !important;
 }
 
-h6 {
-	position: relative;
-	font-size: 1.6rem;
-	border: none;
-}
-
 form {
 	display: flex;
 	flex-direction: column;
 }
 form input,
 form textarea {
-	width: 80%;
+	width: 85%;
 	height: 2rem;
 
 	margin: 0.5rem 0;
 	align-self: center;
 }
 form textarea {
-	width: 80%;
+	width: 85%;
 	height: 4rem;
 
 	align-self: center;
@@ -568,6 +571,10 @@ textarea:focus {
 }
 #contato {
 	display: none;
+}
+#tituloForm {
+	margin-bottom: 2rem;
+	margin-left: 4rem;
 }
 
 #emConstrucao {
